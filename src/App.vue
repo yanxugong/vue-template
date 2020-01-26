@@ -1,10 +1,18 @@
+<!--
+ * @Descripttion: 根页面
+ * @Author: voanit
+ * @Date: 2020-01-26 20:25:16
+ * @LastEditors  : voanit
+ * @LastEditTime : 2020-01-26 20:53:25
+ -->
 <template>
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
+      <router-link to="/upload">Upload</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
