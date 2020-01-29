@@ -2,8 +2,8 @@
  * @Descripttion: 路由
  * @Author: yanxugong
  * @Date: 2020-01-26 20:25:16
- * @LastEditors  : voanit
- * @LastEditTime : 2020-01-26 20:51:59
+ * @LastEditors  : yanxu gong
+ * @LastEditTime : 2020-01-28 21:03:30
  */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
