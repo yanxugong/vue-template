@@ -1,9 +1,9 @@
 <!--
  * @Descripttion: 上传
- * @Author: voanit
+ * @Author: yanxu gong
  * @Date: 2020-01-26 20:52:05
  * @LastEditors  : yanxu gong
- * @LastEditTime : 2020-01-29 15:05:35
+ * @LastEditTime : 2020-01-30 18:53:00
  -->
 <template>
   <div class="upload">
@@ -18,9 +18,9 @@ const SIZE = 10 * 1024 * 1024 // 切片大小
 export default {
   data: () => ({
     container: {
-      file: null,
-      data: []
-    }
+      file: null
+    },
+    data: []
   }),
   methods: {
     handleFileChange(e) {
@@ -33,10 +33,11 @@ export default {
     // 生成文件切片
     createFileChunk(file, size = SIZE) {
       const fileChunkList = []
-      let memory = 0
-      while (memory < file.size) {
-        fileChunkList.push({ file: file.slice(memory, memory + size) })
-        memory += size
+      let sum = 0
+      // 当满足条件时进入循环，进入循环后，当条件不满足时，跳出循环
+      while (sum < file.size) {
+        fileChunkList.push({ file: file.slice(sum, sum + size) })
+        sum += size
       }
       return fileChunkList
     },
@@ -69,10 +70,19 @@ export default {
           this.request({ url: 'http://localhost:3000', data: formData })
         )
       await Promise.all(requestList) // 并发切片
+      await this.mergeRequest()
+    },
+    async mergeRequest() {
+      await this.request({
+        url: 'http://localhost:3000/merge',
+        headers: { 'content-type': 'application/json' },
+        data: JSON.stringify({ filename: this.container.file.name })
+      })
     },
     async handleUpload() {
       if (!this.container.file) return
-      const fileChunkList = this.createFileChunk(this.contanier.file)
+      const fileChunkList = this.createFileChunk(this.container.file)
+      debugger
       this.data = fileChunkList.map(({ file }, index) => ({
         chunk: file,
         hash: `${this.container.file.name}-${index}` // 文件名 + 数组下标
