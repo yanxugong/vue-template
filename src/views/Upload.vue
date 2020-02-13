@@ -3,7 +3,7 @@
  * @Author: yanxu gong
  * @Date: 2020-01-26 20:52:05
  * @LastEditors  : yanxu gong
- * @LastEditTime : 2020-02-13 12:06:32
+ * @LastEditTime : 2020-02-13 13:37:08
  -->
 <template>
   <div>
@@ -162,7 +162,6 @@ export default {
     },
     // 生成文件 hash (web-worker)
     calculateHash(fileChunkList) {
-      debugger
       return new Promise(resolve => {
         // 添加 worker 属性
         this.container.worker = new Worker('/hash.js')
@@ -252,7 +251,6 @@ export default {
       }
     },
     async mergeRequest() {
-      debugger
       await this.request({
         url: 'http://localhost:3000/merge',
         headers: { 'content-type': 'application/json' },
