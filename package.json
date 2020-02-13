@@ -1,0 +1,16 @@
+{
+  "name": "axios",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:gyx-github/file-upload.git",
+  "author": "yanxugong <745710524@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
