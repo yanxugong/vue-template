@@ -3,7 +3,7 @@
  * @Author: yanxu gong
  * @Date: 2020-02-13 17:09:26
  * @LastEditors  : yanxu gong
- * @LastEditTime : 2020-02-14 11:21:14
+ * @LastEditTime : 2020-02-14 16:10:02
  */
 const path = require('path')
 
@@ -12,7 +12,7 @@ module.exports = function(env = {}) {
 
   return {
     mode: dev ? 'development' : 'production',
-    entry: './src/index.js',
+    entry: ['@babel/polyfill', './src/index.js'],
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: dev ? 'axios.js' : 'axios.min.js',

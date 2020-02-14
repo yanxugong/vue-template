@@ -1,20 +1,17 @@
+/*
+ * @Descripttion:
+ * @Author: yanxu gong
+ * @Date: 2020-02-13 17:43:24
+ * @LastEditors  : yanxu gong
+ * @LastEditTime : 2020-02-14 16:14:50
+ */
 import Axios from './axios'
-
-// console.log(axios.default)
-// axios({ url: '1.txt', method: 'post' })
-// axios.get('1.txt', { headers: { aaa: 123 } })
-// axios.post('1.txt', { data: 123 }, { headers: { bbb: 123 } })
-
-let axios = Axios.create({
-  baseUrl: 'aaa',
-  headers: {
-    common: {
-      aaa: 123
+;(async () => {
+  let res = await Axios('/data/1.txt', {
+    headers: {
+      a: 12,
+      b: 'gxg gxg gxg'
     }
-  }
-})
-console.log(axios.default)
-let axios2 = Axios.create({
-  baseUrl: 'bbb'
-})
-console.log(axios2.default)
+  })
+  console.log(res)
+})()
