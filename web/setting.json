@@ -1,0 +1,58 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "semi": false,
+      "singleQuote": true
+    }
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  // 头部注释
+  "fileheader.customMade": {
+    "Author": "yanxu gong",
+    "Date": "Do not edit",
+    "LastEditors": "yanxu gong",
+    "LastEditTime": "Do not edit",
+    "Description": ""
+  },
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "files.autoSave": "onWindowChange",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "workbench.colorTheme": "Snazzy Operator",
+  "editor.fontSize": 15,
+  "editor.fontWeight": "normal",
+  "editor.fontFamily": "Fira code",
+  "editor.fontLigatures": "true",
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "name": {
+        "underline": "#18ff34"
+      }
+    }
+  }
+}
