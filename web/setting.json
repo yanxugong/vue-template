@@ -2,13 +2,6 @@
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "eslint.alwaysShowStatus": true,
-  "vetur.format.defaultFormatter.html": "prettier",
-  "vetur.format.defaultFormatterOptions": {
-    "prettier": {
-      "semi": false,
-      "singleQuote": true
-    }
-  },
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -30,7 +23,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  // 头部注释
+  // // 头部注释
   "fileheader.customMade": {
     "Author": "yanxu gong",
     "Date": "Do not edit",
@@ -43,9 +36,6 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "workbench.colorTheme": "Snazzy Operator",
-  "editor.fontSize": 15,
-  "editor.fontWeight": "normal",
   "editor.fontFamily": "Fira code",
   "editor.fontLigatures": "true",
   "highlight-matching-tag.styles": {
@@ -54,7 +44,15 @@
         "underline": "#18ff34"
       }
     }
-  }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "One Dark Pro"
 }
 
 // Auto Close Tag
@@ -71,16 +69,10 @@
 
 // koroFileHeader
 
-// Prettier - Code formatter
+// One Dark Pro
 
-// Snazzy Operator
+// Prettier - Code formatter
 
 // TODO Highlight
 
-// Vetur
-
-// Vue 2 Snippets
-
-// Vue VSCode Snippets
-
-// WakaTime
+// vscode-icons
